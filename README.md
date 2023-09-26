@@ -7,7 +7,7 @@ See statistics.
 
 ## How to launch
 
-To launch the application you need to clone/fork repo, install all packages and launch the [server mock](https://github.com/mikhama/async-race-api).
+To launch the application you need to clone/fork repo, install all packages and launch the [server mock](https://github.com/mikhama/async-race-api) on port `3000`.
 
 ## Stack
 
