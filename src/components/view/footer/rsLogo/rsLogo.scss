@@ -1,0 +1,15 @@
+@import "../../../../style/vars.scss";
+
+.rs-logo {
+  background: no-repeat center/contain url('../../../../assets/img/rs_school_js.svg');
+  display: block;
+  height: 50px;
+  transition: transform $transition-options;
+  width: 100px;
+
+  @media (hover: hover) {
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

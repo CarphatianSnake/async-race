@@ -1,0 +1,16 @@
+@import 'src/style/vars.scss';
+
+.car-track {
+  width: 100%;
+}
+
+.car-img {
+  height: 2rem;
+  mask-image: url('src/assets/img/car.svg');
+  mask-position: bottom;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  transition: background-color $transition-options,
+    opacity $transition-options;
+  width: 4rem;
+}

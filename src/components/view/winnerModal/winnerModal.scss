@@ -1,0 +1,26 @@
+@import 'src/style/vars.scss';
+
+.modal-wrapper,
+.modal-window {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-wrapper {
+  background-color: rgba(255, 255, 255, 0.05);
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity $transition-options;
+  width: 100%;
+  z-index: 3;
+}
+
+.modal-window {
+  background-color: $background;
+  border-radius: 5px;
+  flex-direction: column;
+  padding: 1rem 2rem;
+}

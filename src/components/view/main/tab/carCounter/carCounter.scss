@@ -1,0 +1,10 @@
+@import 'src/style/vars.scss';
+
+.counter {
+  font-size: 1rem;
+  text-align: center;
+
+  &__value {
+    transition: opacity $transition-options;
+  }
+}

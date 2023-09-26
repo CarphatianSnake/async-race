@@ -1,0 +1,105 @@
+@import 'src/style/vars.scss';
+
+.winners-table {
+  border-collapse: collapse;
+  margin: 1rem auto 0;
+  max-width: 60rem;
+  width: 100%;
+
+  &__body,
+  &__header {
+    border-bottom: 1px solid $text;
+  }
+
+  &__cell,
+  &__heading {
+    padding: 0.5rem;
+  }
+
+  &__heading {
+    position: relative;
+
+    &:hover {
+      @media (hover: hover) {
+        
+        .sort-arrows {
+          opacity: 1;
+        }
+      }
+    }
+
+    &[data-order = ASC] {
+      .sort-arrows::before {
+        opacity: 1;
+      }
+    }
+  
+    &[data-order = DESC] {
+      opacity: 1;
+      .sort-arrows::after {
+        opacity: 1;
+      }
+    }
+
+    &_number {
+      width: 10%;
+    }
+
+    &_car {
+      width: 15%;
+    }
+
+    &_name {
+      width: 55%;
+    }
+
+    &_wins,
+    &_time {
+      cursor: pointer;
+      width: 10%;
+    }
+  }
+
+  &__cell {
+    text-align: center;
+
+    &_car {
+      mask-image: url('src/assets/img/car.svg');
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: 3rem;
+    }
+  }
+}
+
+.sort-arrows {
+  align-items: flex-end;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  opacity: 0.5;
+  position: absolute;
+  transition: opacity $transition-options;
+  right: 0;
+  top: 0;
+  width: 0.5rem;
+
+  &::after,
+  &::before {
+    display: block;
+    font-size: .6rem;
+    line-height: 1;
+    opacity: 0;
+    transition: opacity $transition-options;
+  }
+
+  &::after {
+    content: '⇓';
+  }
+
+  &::before {
+    content: '⇑';
+  }
+}

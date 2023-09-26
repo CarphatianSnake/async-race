@@ -1,0 +1,28 @@
+@import 'src/style/vars.scss';
+
+.cars-list__item {
+  border-bottom: 2px dashed $text;
+  margin-top: 1rem;
+}
+
+.car-info {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.car-name {
+  line-height: 1;
+  transition: opacity $transition-options;
+}
+
+.car-ui {
+  align-items: flex-end;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.car-interface {
+  margin-right: 1rem;
+}

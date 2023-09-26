@@ -1,0 +1,26 @@
+@import 'src/style/vars.scss';
+
+.pagination {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+
+  &__counter {
+    text-align: center;
+    width: 2.5rem;
+    transition: opacity $transition-options;
+  }
+
+  &__button {
+    &:disabled {
+      cursor: auto;
+      opacity: 0.5;
+    }
+
+    &_prev,
+    &_next {
+      margin: 0 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import 'src/style/vars.scss';
+
+.car-button {
+  font-size: 0.75rem;
+  height: 1rem;
+  line-height: 0.875rem;
+  width: 1rem;
+
+  &_start,
+  &_stop {
+    margin-bottom: 0.25rem;
+    padding: 0;
+
+    &:disabled {
+      cursor: auto;
+      opacity: 0.5;
+    }
+  }
+
+  &_edit,
+  &_delete {
+    margin-right: 0.5rem;
+    padding: 0 0.25rem;
+    width: fit-content;
+  }
+}

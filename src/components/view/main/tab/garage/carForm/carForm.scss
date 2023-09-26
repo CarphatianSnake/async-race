@@ -1,0 +1,40 @@
+@import 'src/style/vars.scss';
+
+.car-form {
+  display: flex;
+  margin: 0.5rem 0;
+  width: 17.5rem;
+
+  &__name-input,
+  &__color-picker {
+    margin-right: 0.5rem;
+  }
+
+  &__name-input {
+    width: 10rem;
+    flex: 1;
+  }
+
+  &__color-picker {
+    cursor: pointer;
+    width: 2.5rem;
+  }
+
+  &__button {
+    min-width: 4rem;
+  }
+
+  &__name-input,
+  &__color-picker {
+    transition: opacity $transition-options;
+  }
+
+  &__name-input,
+  &__color-picker,
+  &__button {
+    &:disabled {
+      cursor: auto;
+      opacity: 0.5;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+@import '../../../../style/vars.scss';
+
+.tabs-input {
+  display: none;
+}
+
+.tabs-nav {
+  .garage-tab {
+    margin-right: 2rem;
+  }
+  
+  &__list__item {
+    position: relative;
+    padding: 0.1rem;
+  
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 0;
+      height: 3px;
+      border-radius: 10px;
+      background-color: $text;
+      opacity: 0.5;
+      transition: width $transition-options, opacity $transition-options;
+    }
+  }
+
+  &__label {
+    cursor: pointer;
+    font-size: 1.25rem;
+  }
+}
+
+.garage-tab::after {
+  right: 0;
+}
+
+.winners-tab::after {
+  left: 0;
+}
+
+.garage-tab:hover::after,
+.winners-tab:hover::after {
+  opacity: 0.5;
+}
+
+#garage:checked ~ .tabs-nav .garage-tab::after,
+#winners:checked ~ .tabs-nav .winners-tab::after {
+  opacity: 1;
+}
+
+#garage:checked ~ .tabs-nav .garage-tab::after,
+#winners:checked ~ .tabs-nav .winners-tab::after,
+.garage-tab:hover::after,
+.winners-tab:hover::after {
+  width: 100%;
+}
+
+.tabs-wrapper .garage-tab,
+.tabs-wrapper .winners-tab {
+  display: none;
+}
+
+#garage:checked ~ .tabs-wrapper .garage-tab,
+#winners:checked ~ .tabs-wrapper .winners-tab {
+  display: block;
+}
